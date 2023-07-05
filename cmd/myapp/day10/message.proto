@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option go_package = "zetyun.user2";
+
+message User {
+  int32 id = 1;
+  string name = 2;
+  repeated string tags = 3;
+}
