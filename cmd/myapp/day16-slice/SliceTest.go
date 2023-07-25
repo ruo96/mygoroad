@@ -4,6 +4,14 @@ import "fmt"
 
 func main() {
 	var numbers = make([]int, 3, 5)
+	ints := append(numbers, 1)
+	fmt.Println(cap(ints))
+	ints = append(ints, 2)
+	fmt.Println(cap(ints))
+	ints = append(ints, 3)
+	fmt.Println(cap(ints))
+
+	fmt.Println(ints)
 
 	printSlice(numbers)
 
@@ -33,6 +41,11 @@ func main() {
 	/* 打印子切片从索引 2(包含) 到索引 5(不包含) */
 	number3 := numbers[1:5]
 	printSlice(number3)
+
+	course1 := []string{"go", "grpc", "gin"}
+	course2 := []string{"java", "spring", "netty"}
+	courseSlice := append(course1, course2[1:]...) // 扩容之后，地址很有可能会改变，所以必须要有一个新变量来接收4
+	fmt.Println(courseSlice)
 
 }
 

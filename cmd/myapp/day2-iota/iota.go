@@ -1,10 +1,10 @@
-package day2
+package day2_iota
 
 import "fmt"
 
 func CalIota() {
 	const (
-		a = iota
+		a = iota + 1
 		b
 		c
 		d = "ha"

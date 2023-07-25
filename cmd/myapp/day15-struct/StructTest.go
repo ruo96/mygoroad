@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 结构体就是各种类型的集合
 type Books struct {
 	title   string
 	author  string
@@ -9,7 +10,31 @@ type Books struct {
 	book_id int
 }
 
+// 结构体的嵌套  一般结构体和方法绑定的时候，是使用指针的方式，节省空间
+type Bookstore struct {
+	// 第一种嵌套方式，调用需要借助这个名称book
+	book Books
+	num  int
+	Books
+}
+
 func main1() {
+
+	type boo = Books
+	var boo1 boo
+	boo1.title = "w1"
+
+	b := Bookstore{
+		Books{
+			title: "w1",
+		}, 10, Books{
+			title: "w2",
+		},
+	}
+
+	fmt.Println(b.book)
+
+	fmt.Println(b)
 
 	// 创建一个新的结构体
 	fmt.Println(Books{"Go 语言", "www.runoob.com", "Go 语言教程", 6495407})

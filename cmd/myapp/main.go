@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"mygo/cmd/myapp/day2"
+	"mygo/cmd/myapp/day2-iota"
 	"net/http"
 )
 
@@ -14,5 +14,5 @@ func main() {
 	//http.HandleFunc("/", helloHandler)
 	//log.Fatal(http.ListenAndServe(":8088", nil))
 
-	day2.CalIota()
+	day2_iota.CalIota()
 }
