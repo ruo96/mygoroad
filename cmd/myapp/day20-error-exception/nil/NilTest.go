@@ -41,4 +41,29 @@ func main() {
 	} else {
 		fmt.Println("slice2 is nil")
 	}
+
+	var m map[string]string
+	if m != nil {
+		fmt.Println("m not nil")
+	} else {
+		fmt.Println("m is nil")
+	}
+
+	for key, value := range m {
+		fmt.Println(key, value) // 不会抛出异常
+	}
+
+	var m2 = make(map[string]string, 0)
+	if m2 != nil {
+		fmt.Println("m2 not nil")
+	} else {
+		fmt.Println("m2 is nil")
+	}
+
+	for key, value := range m2 {
+		fmt.Println(key, value) // 不会抛出异常
+	}
+
+	fmt.Println(m["name"])
+	m["name"] = "w1" // 尽管打印key，value等操作不会报错，但是这个赋值却会报错 panic， 因此最好都用make进行初始化操作
 }

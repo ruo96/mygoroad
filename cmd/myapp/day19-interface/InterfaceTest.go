@@ -23,10 +23,17 @@ func (iPhone IPhone) call() {
 func main() {
 	var phone Phone
 
+	phone = NokiaPhone{}
+	phone.call()
+
 	phone = new(NokiaPhone)
 	phone.call()
 
 	phone = new(IPhone)
 	phone.call()
+
+}
+
+func callInterface() {
 
 }
