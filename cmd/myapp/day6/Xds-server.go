@@ -6,8 +6,6 @@ import (
 	"net"
 	"os"
 
-	"github.com/envoyproxy/go-control-plane/pkg/cache"
-	"github.com/envoyproxy/go-control-plane/pkg/server/delta"
 	"google.golang.org/grpc"
 )
 
